@@ -1,0 +1,14 @@
+The application has been successfully installed!
+
+Namespace: {{ .Release.Namespace }}
+Release: {{ .Release.Name }}
+Revision: {{ .Release.Revision }}
+
+
+{{- if .Values.pipelines.start }}
+The pipeline has been installed and started.
+{{- else -}}
+The pipeline has been installed.
+{{ end }}
+
+Use `helm status` to get installation information.
