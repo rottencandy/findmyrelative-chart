@@ -17,12 +17,14 @@ Installing the Chart
 
 This chart does not create a new project for the application. Make sure that you are in the correct project before installing.
 
-1. Modify `incidentService` and `missionService` in the `values.yaml` file with URLs of the Emergency Response Demo services.
+1. Modify `erdemo.incidentService` and `erdemo.missionService` in the `values.yaml` file with URLs of the Emergency Response Demo services.
 
-   Alternatively, the values may be specified using the `--set` parameter when installing.
+   Set the `pipelines.start` value to `true` if the pipeline needs to be started immediately upon install.
+
+   Alternatively, all the values may be specified using the `--set` parameter when installing.
 
 2. Install the chart using `helm` cli:
 
-   ```sh
-   helm install --generate-name find-my-relative
+   ```bash
+   helm install <release-name> findmyrelative-chart [--tls]
    ```

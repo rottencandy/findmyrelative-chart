@@ -8,4 +8,5 @@ erdemo:
   missionService: ""
 
 pipelines:
+  # If true, starts pipeline immediately when installed
   start: false
