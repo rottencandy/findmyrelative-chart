@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: erd-urls
+data:
+  INCIDENT_SERVICE_URL: {{ .Values.erdemo.incidentService | quote }}
+  MISSION_SERVICE_URL: {{ .Values.erdemo.missionService | quote }}
