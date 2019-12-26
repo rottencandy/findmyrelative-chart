@@ -10,3 +10,9 @@ erdemo:
 pipelines:
   # If true, starts pipeline immediately when installed
   start: false
+
+baackend:
+  github:
+    org: "Emergency-Response-Demo"
+    user: "username"
+    repo: "find-service"

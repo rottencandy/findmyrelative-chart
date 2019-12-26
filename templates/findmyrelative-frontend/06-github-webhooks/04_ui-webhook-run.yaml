@@ -8,11 +8,11 @@ spec:
   inputs:
     params:
     - name: GitHubOrg
-      value: {{ .backend.github.org }}
+      value: {{ .Values.backend.github.org }}
     - name: GitHubUser
-      value:{{ .backend.github.user }}
+      value:{{ .Values.backend.github.user }}
     - name: GitHubRepo
-      value:{{ .backend.github.repo }}
+      value:{{ .Values.backend.github.repo }}
     - name: GitHubSecretName
       value: findmyrelative-ui-webhook-secret
     - name: GitHubAccessTokenKey
@@ -20,6 +20,6 @@ spec:
     - name: GitHubSecretStringKey
       value: secret
     - name: ExternalDomain
-      value: {{ .backend.github.listener }}
+      value: {{ .Values.backend.github.listener }}
   timeout: 1000s
   serviceAccount: serviceaccount
