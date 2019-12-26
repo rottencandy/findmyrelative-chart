@@ -1,3 +1,5 @@
+{{ if .Values.pipelines.start }}
+---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineRun
 metadata:
@@ -15,3 +17,4 @@ spec:
   params:
   - name: deployment-name
     value: frontend
+{{ end }}
