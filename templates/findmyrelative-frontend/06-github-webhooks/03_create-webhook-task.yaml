@@ -2,6 +2,9 @@ apiVersion: tekton.dev/v1alpha1
 kind: Task
 metadata:
   name: create-webhook
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "6"
 spec:
   volumes:
   - name: github-secret

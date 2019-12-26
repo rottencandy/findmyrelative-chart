@@ -2,6 +2,9 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: tekton-triggers-createwebhook
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "4"
 rules:
 - apiGroups:
   - ""

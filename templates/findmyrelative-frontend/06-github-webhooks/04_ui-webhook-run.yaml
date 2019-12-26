@@ -2,6 +2,9 @@ apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
   name: create-findmyrelative-ui-repo-webhook-run
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "7"
 spec:
   taskRef:
     name: create-webhook
@@ -10,9 +13,9 @@ spec:
     - name: GitHubOrg
       value: {{ .Values.backend.github.org }}
     - name: GitHubUser
-      value:{{ .Values.backend.github.user }}
+      value: {{ .Values.backend.github.user }}
     - name: GitHubRepo
-      value:{{ .Values.backend.github.repo }}
+      value: {{ .Values.backend.github.repo }}
     - name: GitHubSecretName
       value: findmyrelative-ui-webhook-secret
     - name: GitHubAccessTokenKey
@@ -20,6 +23,6 @@ spec:
     - name: GitHubSecretStringKey
       value: secret
     - name: ExternalDomain
-      value: {{ .Values.backend.github.listener }}
+      value: {{ .Values.backend.github.listener | quote }}
   timeout: 1000s
   serviceAccount: serviceaccount

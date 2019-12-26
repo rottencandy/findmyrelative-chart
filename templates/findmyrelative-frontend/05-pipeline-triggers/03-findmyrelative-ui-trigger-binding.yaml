@@ -2,6 +2,9 @@ apiVersion: tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   name: findmyrelative-ui-cicd-pipelinebinding
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "1"
 spec:
   params:
   - name: gitrevision
