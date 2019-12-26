@@ -25,10 +25,10 @@ backend:
 
   # Add Github token here
   # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
-  token: "token"
+  token: "your_token"
   # Random string for secret generation
   secret: "abcde12345"
 
-  # Add Webhook URL of the event listener
-  # Refer https://developer.github.com/webhooks/creating/
+  # URL of the Webhook event listener
+  # This URL will be given by the route which creates the event listener
   listener: ""
