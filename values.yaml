@@ -10,3 +10,23 @@ erdemo:
 pipelines:
   # If true, starts pipeline immediately when installed
   start: false
+
+frontend:
+  github:
+    # Repo where the webhook is to be created
+    repo: "findmyrelative-frontend"
+    # Github username
+    user: "username"
+    # The org name of the find-service repo
+    # If there is no org, replace with username
+    org: "Emergency-Response-Demo"
+
+  # Add Github token here
+  # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
+  token: "your_token"
+  # Random string for secret generation
+  secret: "abcde12345"
+
+  # URL of the Webhook event listener
+  # This URL will be given by the route which creates the event listener
+  listener: ""
