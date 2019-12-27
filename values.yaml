@@ -13,7 +13,7 @@ pipelines:
   # Change to true for starting pipeline immediately on install
   start: false
 
-backend:
+frontend:
   github:
     # Repo where the webhook is to be created
     repo: "find-service"
