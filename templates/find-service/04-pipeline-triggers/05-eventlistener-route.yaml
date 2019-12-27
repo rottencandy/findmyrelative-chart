@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: findmyrelative-backend-cicd-eventlistener
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "3"
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: el-findmyrelative-backend-cicd-listener
+    weight: 100

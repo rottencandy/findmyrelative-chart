@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: findmyrelative-backend-cicd-pipelinebinding
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "1"
+spec:
+  params:
+  - name: gitrevision
+    value: $(body.head_commit.id)
+  - name: namespace
+    value: find-my-relative
+  - name: gitrepositoryurl
+    value: $(body.repository.url)
+  - name: gitrepositoryname
+    value: $(body.repository.name)
