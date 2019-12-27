@@ -6,5 +6,5 @@ spec:
   type: image
   params:
   - name: url
-    value: image-registry.openshift-image-registry.svc:5000/find-my-relative/backend:latest
+    value: image-registry.openshift-image-registry.svc:5000/{{ .Release.Namespace }}/backend:latest
 
