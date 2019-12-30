@@ -11,7 +11,7 @@ pipelines:
   # If true, starts pipeline immediately when installed
   start: false
 
-frontend:
+backend:
   github:
     # Repo where the webhook is to be created
     repo: "findmyrelative-frontend"
