@@ -5,10 +5,14 @@ Release: {{ .Release.Name }}
 Revision: {{ .Release.Revision }}
 
 
-{{- if .Values.pipelines.start }}
-The pipeline has been installed and started.
+{{ if .Values.pipelines.start }}
+The pipelines have been installed and started.
 {{- else -}}
-The pipeline has been installed.
+The pipelines have been installed.
 {{ end }}
 
-Use `helm status` to get installation information.
+Use `oc get routes findmyrelative-backend-cicd-eventlistener`
+and `oc get routes findmyrelative-ui-cicd-eventlistener`
+to get the links to listeners for creating GitHub webhooks.
+
+Use `helm status {{ .Release.Name }}` to get installation information.
