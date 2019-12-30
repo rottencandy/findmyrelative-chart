@@ -13,6 +13,7 @@ pipelines:
   # Change to true for starting pipeline immediately on install
   start: false
 
+# Configuration for the findmyrelative-frontend
 frontend:
   github:
     # Repo where the webhook is to be created
@@ -23,6 +24,13 @@ frontend:
     # If there is no org, replace with username
     org: "Emergency-Response-Demo"
 
+  # Add Github token here
+  # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
+  token: "your_token"
+  # Random string for secret generation
+  secret: "abcde12345"
+
+# Configuration for the find-service
 backend:
   github:
     # Repo where the webhook is to be created
