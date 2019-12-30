@@ -1,0 +1,23 @@
+{{ if .Values.pipelines.start }}
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  name: findmyrelative-ui-pipelinerun
+annotations:
+  "helm.sh/hook": post-install
+  "helm.sh/hook-weight": "0"
+spec:
+  pipelineRef:
+    name: findmyrelative-ui-pipeline
+  resources:
+  - name: source-git-repo
+    resourceRef:
+      name: findmyrelative-ui-git-repo
+  - name: image-resource-name
+    resourceRef:
+      name: findmyrelative-ui-image
+  params:
+  - name: deployment-name
+    value: frontend
+{{ end }}

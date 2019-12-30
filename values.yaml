@@ -1,12 +1,34 @@
 # Default values for find-my-relative.
 # This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+# Declare variables to be passed into the installation templates
 
 # Links to Emergency Response Demo services
 erdemo:
+  # URL for the incident service
   incidentService: ""
+  # URL for the mission service
   missionService: ""
 
 pipelines:
-  # If true, starts pipeline immediately when installed
+  # Change to true for starting pipeline immediately on install
   start: false
+
+frontend:
+  github:
+    # Repo where the webhook is to be created
+    repo: "find-service"
+    # Github username
+    user: "username"
+    # The org name of the find-service repo
+    # If there is no org, replace with username
+    org: "Emergency-Response-Demo"
+
+  # Add Github token here
+  # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
+  token: "your_token"
+  # Random string for secret generation
+  secret: "abcde12345"
+
+  # URL of the Webhook event listener
+  # This URL will be given by the route which creates the event listener
+  listener: ""
