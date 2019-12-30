@@ -12,6 +12,7 @@ spec:
     kind: Service
     name: el-findmyrelative-ui-cicd-listener
     weight: 100
+  host: ""
 status:
   ingress:
     - conditions:
