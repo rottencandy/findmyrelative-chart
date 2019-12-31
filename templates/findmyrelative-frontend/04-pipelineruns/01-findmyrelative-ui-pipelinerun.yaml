@@ -4,9 +4,9 @@ apiVersion: tekton.dev/v1alpha1
 kind: PipelineRun
 metadata:
   name: findmyrelative-ui-pipelinerun
-annotations:
-  "helm.sh/hook": post-install
-  "helm.sh/hook-weight": "0"
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "0"
 spec:
   pipelineRef:
     name: findmyrelative-ui-pipeline

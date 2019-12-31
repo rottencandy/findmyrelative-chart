@@ -3,6 +3,9 @@ apiVersion: tekton.dev/v1alpha1
 kind: PipelineRun
 metadata:
   name: findmyrelative-backend-pipelinerun
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "0"
 spec:
   pipelineRef:
     name: findmyrelative-backend-pipeline
