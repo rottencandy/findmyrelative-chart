@@ -14,6 +14,7 @@ Prerequisites
 Setting up webhooks
 -------------------
 
+GitHub webhooks can be used if you wish to trigger new deployments on commit pushes.
 Webhooks can be set up manually using the GitHub website, or automated using a personal access token.
 
 To set up webhooks, fork the [findmyrelative-frontend](https://github.com/Emergency-Response-Demo/findmyrelative-frontend) and [find-service](https://github.com/Emergency-Response-Demo/find-service) repositories, and update the corresponding values `frontend.github` and `backend.github` in `Values.yaml`.
