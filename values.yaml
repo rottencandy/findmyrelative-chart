@@ -30,6 +30,10 @@ frontend:
   # Random string for secret generation
   secret: "abcde12345"
 
+  # URL of the Webhook event listener
+  # This URL will be given by the route which creates the event listener
+  listener: ""
+
 # Configuration for the find-service
 backend:
   github:
