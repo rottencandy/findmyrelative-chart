@@ -1,3 +1,4 @@
+{{ if .Values.backend.token  }}
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
@@ -26,3 +27,4 @@ spec:
       value: {{ .Values.backend.github.listener | quote }}
   timeout: 1000s
   serviceAccount: serviceaccount
+{{ end }}
