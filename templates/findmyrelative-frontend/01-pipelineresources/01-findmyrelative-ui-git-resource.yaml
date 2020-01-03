@@ -6,4 +6,4 @@ spec:
   type: git
   params:
   - name: url
-    value: https://github.com/{{ .Values.frontend.github.user }}/{{ .Values.frontend.githb.repo }}
+    value: https://github.com/{{ .Values.frontend.github.user }}/{{ .Values.frontend.github.repo }}
