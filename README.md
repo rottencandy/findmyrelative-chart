@@ -29,7 +29,6 @@ To set up webhooks, fork the [findmyrelative-frontend](https://github.com/Emerge
 
 1. Install the chart. Check the post-install message for instructions to get the listener URLs.
 2. Create webhooks for the repositories, instructions [here](https://developer.github.com/webhooks/creating). Use the listener URLs for setting the payload URLs.
-3. Install the chart.
 
 Installing the Chart
 --------------------
@@ -40,6 +39,10 @@ Installing the Chart
    ```
 
 2. Modify `erdemo.incidentService` and `erdemo.missionService` in the `values.yaml` file with URLs of the Emergency Response Demo services.
+
+   Add your mapbox token to `mapboxToken`. You can get a token from [here](https://account.mapbox.com).
+
+   Add the external hostname of the cluster to `clusterHostname`.
 
    Set the `pipelines.start` value to `true` if the pipeline needs to be started immediately upon install.
 
