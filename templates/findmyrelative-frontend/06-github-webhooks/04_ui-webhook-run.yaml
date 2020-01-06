@@ -24,7 +24,7 @@ spec:
     - name: GitHubSecretStringKey
       value: secret
     - name: ExternalDomain
-      value: {{ .Values.frontend.github.listener | quote }}
+      value: findmyrelative-ui-cicd-eventlistener.find-my-relative.apps.{{ .Values.clusterHostname }}
   timeout: 1000s
   serviceAccount: serviceaccount
 {{ end  }}
