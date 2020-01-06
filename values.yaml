@@ -12,8 +12,8 @@ erdemo:
 # Mapbox token (https://account.mapbox.com)
 mapboxToken: ""
 
-# Domain URL of the cluster(without the http* prefix)
-# Example: cluster-abcd.example.opentlc.com
+# Domain URL of the cluster
+# Example: apps.<cluster-id>.example.openshift.com
 clusterHostname: ""
 
 pipelines:

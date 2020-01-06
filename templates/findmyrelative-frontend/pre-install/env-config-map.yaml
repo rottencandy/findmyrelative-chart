@@ -6,5 +6,5 @@ metadata:
     "helm.sh/hook": pre-install
     "helm.sh/hook-weight": "0"
 data:
-  REACT_APP_BACKEND_URL: 'http://backend-find-my-relative.apps.{{ .Values.clusterHostname }}'
+  REACT_APP_BACKEND_URL: 'http://backend-find-my-relative.{{ regexReplaceAll ".*apps" .Values.clusterHostname "apps" }}'
   REACT_APP_MAPBOX_TOKEN: {{ .Values.mapboxToken | quote }}
