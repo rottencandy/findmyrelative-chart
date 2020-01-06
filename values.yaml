@@ -9,6 +9,13 @@ erdemo:
   # URL for the mission service
   missionService: ""
 
+# Mapbox token (https://account.mapbox.com)
+mapboxToken: ""
+
+# Domain URL of the cluster(without the http* prefix)
+# Example: cluster-abcd.example.opentlc.com
+clusterHostname: ""
+
 pipelines:
   # Change to true for starting pipeline immediately on install
   start: false
