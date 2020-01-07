@@ -26,20 +26,16 @@ frontend:
     # Repo where the webhook is to be created
     repo: "find-service"
     # Github username
-    user: "username"
+    user: ""
     # The org name of the find-service repo
     # If there is no org, replace with username
-    org: "Emergency-Response-Demo"
+    org: ""
 
   # Add Github token here
   # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
   token: ""
-  # Add aandom string for secret creation
+  # Add random string for secret creation
   secret: "abcde12345"
-
-  # URL of the Webhook event listener
-  # This URL will be provided by the route which creates the event listener
-  listener: ""
 
 # Configuration for the find-service
 backend:
@@ -47,17 +43,13 @@ backend:
     # Repo where the webhook is to be created
     repo: "findmyrelative-frontend"
     # Github username
-    user: "username"
+    user: ""
     # The org name of the find-service repo
     # If there is no org, replace with username
-    org: "Emergency-Response-Demo"
+    org: ""
 
   # Add Github token here
   # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
   token: ""
-  # Add aandom string for secret creation
+  # Add random string for secret creation
   secret: "abcde12345"
-
-  # URL of the Webhook event listener
-  # This URL will be provided by the route which creates the event listener
-  listener: ""
