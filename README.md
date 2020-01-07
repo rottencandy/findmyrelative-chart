@@ -15,8 +15,8 @@ Chart details
 -------------
 
 This chart installs the following:
-- Pipeline that builds and deploys [findmyrelative-frontend](https://github.com/Emergency-Response-Demo/findmyrelative-frontend)
-- Pipeline that builds and deploys [find-service](https://github.com/Emergency-Response-Demo/find-service)
+- Pipeline that builds and deploys [findmyrelative-frontend](https://github.com/Emergency-Response-Demo/findmyrelative-frontend).
+- Pipeline that builds and deploys [find-service](https://github.com/Emergency-Response-Demo/find-service).
 - Event listeners for the applications that listen to GitHub webhook events, triggering the pipelines on code pushes.
 
 Installation
@@ -30,13 +30,13 @@ Webhooks can either be set up manually on the GitHub website, or automated using
 
 To set up webhooks, first fork the [findmyrelative-frontend](https://github.com/Emergency-Response-Demo/findmyrelative-frontend) and [find-service](https://github.com/Emergency-Response-Demo/find-service) repositories, and update the corresponding `frontend` and `backend` values in `Values.yaml`:
 
-|Parameter    |Description                                                 |
-|:-----------:|------------------------------------------------------------|
-|`github.repo`|Name of the repository                                      |
-|`github.user`|GitHub username                                             |
-|`github.org` |Organization name. If there is no org, replace with username|
-|`token`      |GitHub personal access token                                |
-|`secret`     |Random string for creating secrets                          |
+|Parameter    |Description                                                           |
+|:-----------:|----------------------------------------------------------------------|
+|`github.repo`|Name of the repository                                                |
+|`github.user`|GitHub username                                                       |
+|`github.org` |Organization name. If there is no org, replace with username          |
+|`token`      |GitHub personal access token. Leave empty if setting webhooks manually|
+|`secret`     |Random string for creating secrets                                    |
 
 #### Using token:
 
