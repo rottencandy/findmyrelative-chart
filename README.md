@@ -29,6 +29,7 @@ GitHub webhooks can be used if you wish to trigger the pipelines on code pushes.
 Webhooks can either be set up manually on the GitHub website, or automated using a personal access token.
 
 To set up webhooks, first fork the [findmyrelative-frontend](https://github.com/Emergency-Response-Demo/findmyrelative-frontend) and [find-service](https://github.com/Emergency-Response-Demo/find-service) repositories, and update the corresponding `frontend` and `backend` values in `Values.yaml`:
+
 |Parameter    |Description                                                 |
 |:-----------:|------------------------------------------------------------|
 |`github.repo`|Name of the repository                                      |
@@ -57,13 +58,14 @@ To set up webhooks, first fork the [findmyrelative-frontend](https://github.com/
 
 2. Set the following configuration options, you can edit the `Values.yaml` file, pass your own config file using `-f`, or use `--set` to specify the values directly.
 
-   |Parameter               |Description                                                                                                          |
-   |:----------------------:|---------------------------------------------------------------------------------------------------------------------|
-   |`erdemo.incidentService`|URL of incident service from the Emergency Response Demo applicaiton                                                 |
-   |`erdemo.missionService` |URL of mission service from the Emergency Response Demo applicaiton                                                  |
-   |`clusterHostname`       |External hostname of the cluster, used for determining `Route` URLs. Must be of the form `apps.<cluster-id>.<domain>`|
-   |`mapboxToken`           |Mapbox token for creating maps. Can be created [here](https://account.mapbox.com)                                    |
-   |`pipelines.start`       |Boolean value. Specifies wether the pipelines should start immediately upon install                                  |
+
+|Parameter               |Description                                                                                                          |
+|:----------------------:|---------------------------------------------------------------------------------------------------------------------|
+|`erdemo.incidentService`|URL of incident service from the Emergency Response Demo applicaiton                                                 |
+|`erdemo.missionService` |URL of mission service from the Emergency Response Demo applicaiton                                                  |
+|`clusterHostname`       |External hostname of the cluster, used for determining `Route` URLs. Must be of the form `apps.<cluster-id>.<domain>`|
+|`mapboxToken`           |Mapbox token for creating maps. Can be created [here](https://account.mapbox.com)                                    |
+|`pipelines.start`       |Boolean value. Specifies wether the pipelines should start immediately upon install                                  |
 
 3. Install the chart using `helm` cli:
 
