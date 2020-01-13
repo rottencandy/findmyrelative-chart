@@ -24,7 +24,7 @@ pipelines:
 frontend:
   github:
     # Repo where the webhook is to be created
-    repo: "find-service"
+    repo: "findmyrelative-frontend"
     # Github username
     user: ""
     # The org name of the find-service repo
@@ -41,7 +41,7 @@ frontend:
 backend:
   github:
     # Repo where the webhook is to be created
-    repo: "findmyrelative-frontend"
+    repo: "find-service"
     # Github username
     user: ""
     # The org name of the find-service repo
