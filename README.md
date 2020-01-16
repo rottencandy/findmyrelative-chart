@@ -69,19 +69,25 @@ To set up webhooks, first fork the [findmyrelative-frontend](https://github.com/
 
 3. Install the chart using `helm` cli:
 
+   Add the chart repository:
    ```bash
-   helm install <my-release> findmyrelative-chart [--tls]
+   helm repo add erdemo https://rottencandy.github.io/findmyrelative-chart/
+   helm repo update
+   ```
+   Install the chart:
+   ```bash
+   helm install <my-release> erdemo/find-my-relative
    ```
 
 ## Verifying install
 
 To verify the install or get status:
 ```bash
-helm status <my-release> [--tls]
+helm status <my-release>
 ```
 
 ## Uninstallation
 To uninstall/delete the application:
 ```bash
-helm uninstall <my-release> [--tls]
+helm uninstall <my-release>
 ```
