@@ -63,7 +63,6 @@ To set up webhooks, first fork the [findmyrelative-frontend](https://github.com/
 |:----------------------:|---------------------------------------------------------------------------------------------------------------------|
 |`erdemo.incidentService`|URL of incident service from the Emergency Response Demo applicaiton                                                 |
 |`erdemo.missionService` |URL of mission service from the Emergency Response Demo applicaiton                                                  |
-|`clusterHostname`       |External hostname of the cluster, used for determining `Route` URLs. Must be of the form `apps.<cluster-id>.<domain>`|
 |`mapboxToken`           |Mapbox token for creating maps. Can be created [here](https://account.mapbox.com)                                    |
 |`pipelines.start`       |Boolean value. Specifies wether the pipelines should start immediately upon install                                  |
 

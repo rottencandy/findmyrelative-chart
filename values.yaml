@@ -12,44 +12,44 @@ erdemo:
 # Mapbox token (https://account.mapbox.com)
 mapboxToken: ""
 
-# Domain URL of the cluster
-# Example: apps.<cluster-id>.example.openshift.com
-clusterHostname: ""
-
 pipelines:
-  # Change to true for starting pipeline immediately on install
-  start: false
+  # Change to false if you do not want the pipeline to start immediately
+  start: true
 
 # Configuration for the findmyrelative-frontend
 frontend:
   github:
-    # Repo where the webhook is to be created
-    repo: "findmyrelative-frontend"
-    # Github username
-    user: ""
-    # The org name of the find-service repo
-    # If there is no org, replace with username
-    org: ""
-
   # Add Github token here
   # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
+  # Leave empty to skip webhook creation
   token: ""
+
+  # Repo where the webhook is to be created
+  repo: "findmyrelative-frontend"
+  # Github username
+  user: ""
+  # The org name of the find-service repo
+  # If there is no org, replace with username
+  org: ""
+
   # Add random string for secret creation
   secret: "abcde12345"
 
 # Configuration for the find-service
 backend:
   github:
-    # Repo where the webhook is to be created
-    repo: "find-service"
-    # Github username
-    user: ""
-    # The org name of the find-service repo
-    # If there is no org, replace with username
-    org: ""
-
   # Add Github token here
+  # Leave empty to skip webhook creation
   # Refer https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
   token: ""
+
+  # Repo where the webhook is to be created
+  repo: "find-service"
+  # Github username
+  user: ""
+  # The org name of the find-service repo
+  # If there is no org, replace with username
+  org: ""
+
   # Add random string for secret creation
   secret: "abcde12345"
