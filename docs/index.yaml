@@ -3,12 +3,22 @@ entries:
   find-my-relative:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-01-16T17:05:47.612564629+05:30"
+    created: "2020-02-24T15:15:30.394247373+05:30"
     description: A Helm chart for installing the Find My Relative application.
-    digest: 704a33653da649096b78d4e7cf9c5f6df296a2ea0e2e21a489a40416a1d0f17e
+    digest: 1288718448386d1618f33a0ffe3d9bc4e85eee24b257a63416d2df02bce462b7
     name: find-my-relative
     type: application
     urls:
-    - find-my-relative-0.5.0.tgz
-    version: 0.5.0
-generated: "2020-01-16T17:05:47.607210992+05:30"
+    - find-my-relative-0.6.2.tgz
+    version: 0.6.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-02-24T15:15:30.391949341+05:30"
+    description: A Helm chart for installing the Find My Relative application.
+    digest: 04a7733e0c9a50efd28eed22b234fed32c55566194d61c8e5307286f2b85aca9
+    name: find-my-relative
+    type: application
+    urls:
+    - find-my-relative-0.6.2.tgz
+    version: 0.6.2
+generated: "2020-02-24T15:15:30.390055277+05:30"
